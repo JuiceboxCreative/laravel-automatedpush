@@ -1,0 +1,30 @@
+{
+    "name": "juicebox/automatedpush",
+    "description": "To add automated git hook for deployments to git",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Juicebox\\Automatedpush\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.1 || ^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Juicebox\\Automatedpush\\AutomatedpushServiceProvider"
+            ],
+            "aliases": {
+                "Automatedpush": "Juicebox\\Automatedpush\\Automatedpush"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "Robert Lim",
+            "email": "robert@juicebox.com.au"
+        }
+    ],
+    "minimum-stability": "dev"
+}
