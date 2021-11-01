@@ -18,7 +18,7 @@ composer require juicebox/automatedpush --dev
 
 ### Run the setup command
 
-This will publish the file required to `.git/pre-push`, and that's it!
+This will publish the file required to `.git/hooks/pre-push`, and that's it!
 
 ```bash
 php artisan automatedpush:setup
