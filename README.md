@@ -12,7 +12,7 @@ Use PHPUnit testing via Laravel's artisan test command and git's pre-push hook t
 To get started, please include the repository VCS reference and then require the
 
 ```bash
-composer config repositories.automatedpush vcs git@bitbucket.org:JuiceBoxCreative/laravel-automatedpush.git
+composer config repositories.automatedpush vcs git@github.com:JuiceboxCreative/laravel-automatedpush.git
 composer require juicebox/automatedpush --dev
 ```
 
@@ -55,3 +55,8 @@ php artisan test
 The tests are found in `tests/Feature` and `tests/Unit`. Any file ending in `Test.php` will be run automatically. See [Laravel Testing](https://laravel.com/docs/8.x/testing) for more information.
 
 There is a database schema which is imported to the staging database found in `.env.testing`. This was the initial data we had to work with to test our PHP calculations were correct.
+
+## Security alerts
+
+This package is a library. It declares a wide `laravel/framework` range and ships no `composer.lock`, so Dependabot alerts against `laravel/framework` describe the lowest version the range allows, not the version that runs. The consuming application resolves the framework version in its own lockfile and is where patched versions are applied. We dismiss these alerts as inaccurate and keep the range so older Laravel versions stay supported.
+
